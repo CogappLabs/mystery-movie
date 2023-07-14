@@ -2,7 +2,21 @@ import Image from 'next/image';
 
 const ImageRow = ({ imageUrls }) => {
     if (!imageUrls) {
-        return null; // Return null if imageUrls is undefined
+        console.log('Problem with images');
+        
+        return (
+            <div className="flex gap-4 justify-between flex-wrap">
+            <div className="">
+                <Image src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" width={400} height={300} alt="Image 1" />
+            </div>
+            <div className="">
+                <Image src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" width={400} height={300} alt="Image 2" />
+            </div>
+            <div className="">
+                <Image src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" width={400} height={300} alt="Image 3" />
+            </div>
+            </div>
+        );
     }
 
     return (
