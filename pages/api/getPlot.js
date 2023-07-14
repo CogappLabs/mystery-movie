@@ -20,8 +20,6 @@ export default async function getMoviePlot (req, res) {
         // Otherwise, get the post JSON
         let data = await response.json();
 
-        console.log(data);
-
         res.status(200).json(data.Plot);
 
     } catch (error) {
