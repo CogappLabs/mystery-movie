@@ -13,20 +13,19 @@ export default async function handler(req, res) {
     }
 
     try {
-        const imageUrls = [];
-
-        for (const prompt of prompts) {
+        const imagePromises = prompts.map(async (prompt) => {
             const response = await openai.createImage({
                 prompt: prompt,
                 n: 1,
                 size: "512x512",
             });
 
-            const imageUrl = response.data.data[0].url;
-            imageUrls.push(imageUrl);
-        }
+            return response.data.data[0].url;
+        });
 
-    res.status(200).json(imageUrls);
+        const imageUrls = await Promise.all(imagePromises);
+
+        res.status(200).json(imageUrls);
 
     } catch (error) {
         console.error('Error:', error);
