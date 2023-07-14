@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     }
 
     try {
-    const moviePlot = `Please split the following movie plot into 3 short sentence. 1 sentence should explain the beginning of the movie, 1 should explain the middle and 1 should explain the end.
+    const moviePlot = `Please split the following movie plot into 3 short sentences. 1 sentence should explain the beginning of the movie, 1 should explain the middle and 1 should explain the end.
     Movie plot: ${plot}`;
 
     // const roleContent = genericCritic;

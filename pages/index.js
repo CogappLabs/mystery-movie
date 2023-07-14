@@ -17,7 +17,8 @@ export default function Home() {
                       'The+Devil+Wears+Prada', 'The+Princess+Diaries', 'Mamma+Mia+!', 'The+Godfather', 'The+Dark+Knight', 'Jaws', 'Alien', 'The+Truman+Show', 'Interstellar', 'Inception', 
                       'Toy+Story', 'Gone+Girl', 'The+Kings+Speech', 'La+La+Land', 'The+Social+Network', 'Arrival', 'Nightcrawler', 'Whiplash', 'The+Revenant', 'The+Big+Short', 'Flight', 
                       'Joy', 'Captain+Phillips', 'Dune', 'Baby+Driver', 'Megamind', 'Zoolander', 'Bruce+Almighty', 'The+Secret+Life+Of+Walter+Mitty', 'Cruella', 'Encanto', 'Hidden+Figures',
-                      'The+Grand+Budapest+Hotel', 'The+Impossible', 'The+Maze+Runner', 'Jumanji', 'Night+At+The+Museum', 'The+Hunger+Games', 'The+Lego+Movie', '21+Jump+Street', 'American+Hustle'];
+                      'The+Grand+Budapest+Hotel', 'The+Impossible', 'The+Maze+Runner', 'Jumanji', 'Night+At+The+Museum', 'The+Hunger+Games', 'The+Lego+Movie', '21+Jump+Street', 'American+Hustle',
+                      'Catch+Me+If+You+Can'];
 
 
       // Generate a random index within the array length
