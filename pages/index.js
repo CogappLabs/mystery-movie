@@ -106,7 +106,7 @@ export default function Home() {
   return (
     <div className="container mt-10 mx-auto mb-10">
       <h1 className="mb-4 text-2xl font-bold">Mystery Movie</h1>
-      <p className="mb-2"><span className="font-bold">How to use:</span> Click 'Play Now' to generate three AI images based on the plot of a random movie. The images will depict the start, middle and end of the story.</p>
+      <p className="mb-2"><span className="font-bold">How to use:</span> Click &apos;Play Now&apos; to generate three AI images based on the plot of a random movie. The images will depict the start, middle and end of the story.</p>
 			<p className="mb-4">Can you guess the movie title?</p> 
 
       {showButton && <div className="flex items-center mb-6"><button className="font-bold rounded-md bg-violet-600 text-white hover:bg-white hover:text-violet-600 active:bg-white active:text-violet-600 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-sky-400 p-2" onClick={HandleButtonClick}>Play Now</button><p className={isInProgress ? 'ml-4' : 'hidden'}>Image generation in progress... this may take some time.</p></div>}
