@@ -13,7 +13,11 @@ export default function Home() {
     setIsInProgress(true);
 
     try {
-      const movies = ['Titanic', 'Finding+Nemo', 'Forest+Gump', 'The+Shawshank+Redemption', 'Die+Hard', 'The+Wizard+Of+Oz', 'Home+Alone', 'The+Little+Mermaid', 'Matilda', '27+Dresses', 'The+Devil+Wears+Prada', 'The+Princess+Diaries', 'Mamma+Mia+!', 'The+Godfather', 'The+Dark+Knight', 'Jaws', 'Alien', 'The+Truman+Show', 'Interstellar', 'Inception', 'Toy+Story', 'Gone+Girl', 'The+Kings+Speech', 'La+La+Land', 'The+Social+Network', 'Arrival'];
+      const movies = ['Titanic', 'Finding+Nemo', 'Forest+Gump', 'The+Shawshank+Redemption', 'Die+Hard', 'The+Wizard+Of+Oz', 'Home+Alone', 'The+Little+Mermaid', 'Matilda', '27+Dresses', 
+                      'The+Devil+Wears+Prada', 'The+Princess+Diaries', 'Mamma+Mia+!', 'The+Godfather', 'The+Dark+Knight', 'Jaws', 'Alien', 'The+Truman+Show', 'Interstellar', 'Inception', 
+                      'Toy+Story', 'Gone+Girl', 'The+Kings+Speech', 'La+La+Land', 'The+Social+Network', 'Arrival', 'Nightcrawler', 'Whiplash', 'The+Revenant', 'The+Big+Short', 'Flight', 
+                      'Joy', 'Captain+Phillips', 'Dune', 'Baby+Driver', 'Megamind', 'Zoolander', 'Bruce+Almighty', 'The+Secret+Life+Of+Walter+Mitty', 'Cruella', 'Encanto', 'Hidden+Figures',
+                      'The+Grand+Budapest+Hotel', 'The+Impossible', 'The+Maze+Runner', 'Jumanji', 'Night+At+The+Museum', 'The+Hunger+Games', 'The+Lego+Movie', '21+Jump+Street', 'American+Hustle'];
 
 
       // Generate a random index within the array length
