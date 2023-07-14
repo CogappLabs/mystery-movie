@@ -3,7 +3,7 @@ import AnswerForm from './answerForm'
 // Get artwork data from form and store or discard
 export default function checkAnswer(answer) {
     // Get current title
-    if (localStorage.getItem('movieTitle')) {
+    if (typeof window !== 'undefined' && localStorage.getItem('movieTitle')) {
         // object = JSON.parse(localStorage.getItem('movieTitle'));
         
         let storedMovieTitle = localStorage.getItem('movieTitle');
