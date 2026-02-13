@@ -1,9 +1,8 @@
-const { Configuration, OpenAIApi } = require("openai");
+const OpenAI = require("openai");
 
-const configuration = new Configuration({
+const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
 export default async function handler(req, res) {
     const { prompts } = req.body;
@@ -14,13 +13,13 @@ export default async function handler(req, res) {
 
     try {
         const imagePromises = prompts.map(async (prompt) => {
-            const response = await openai.createImage({
+            const response = await openai.images.generate({
                 prompt: prompt,
                 n: 1,
                 size: "512x512",
             });
 
-            return response.data.data[0].url;
+            return response.data[0].url;
         });
 
         const imageUrls = await Promise.all(imagePromises);

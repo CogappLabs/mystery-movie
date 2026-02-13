@@ -1,9 +1,8 @@
-const { Configuration, OpenAIApi } = require("openai");
+const OpenAI = require("openai");
 
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
 export default async function handler(req, res) {
   const { plot } = req.body;
@@ -18,7 +17,7 @@ export default async function handler(req, res) {
     Movie plot: ${plot}`;
 
     // const roleContent = genericCritic;
-    const response = await openai.createChatCompletion({
+    const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       max_tokens: 200,
       messages: [
@@ -27,7 +26,7 @@ export default async function handler(req, res) {
       ],
     });
 
-    const generatedResponse = response.data.choices[0].message.content;
+    const generatedResponse = response.choices[0].message.content;
     // Remove the labels "Beginning:", "Middle:", "End:" using regular expressions
     const plotSentences = generatedResponse.split('\n')
     .map(sentence => sentence.replace(/(Beginning:|Middle:|End:)\s*/, ''));
